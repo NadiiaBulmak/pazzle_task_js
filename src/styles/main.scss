@@ -1,3 +1,167 @@
 body {
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
   margin: 0;
+  padding-left: 10%;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+}
+
+.description {
+  margin-bottom: 20px;
+
+  &__subheader {
+    font-size: 18px;
+    font-weight: 600;
+    color: #090979;
+  }
+
+  &__header {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+
+  &__paragraph {
+    font-size: 16px;
+    color: #090979;
+    line-height: 1.5;
+  }
+}
+
+.program-field {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+
+  &__label {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #090979;
+    align-self: center;
+    text-align: center;
+    padding: 12px;
+    height: 48px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #090979;
+    caret-color: transparent;
+    cursor: pointer;
+  }
+
+  &__input {
+    min-height: 24px;
+    padding: 10px;
+    border: 1px solid #090979;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+    height: 48px;
+    width: 100%;
+
+    &:hover {
+      border-color: #090979;
+    }
+  }
+}
+
+.button {
+  align-self: flex-end;
+  box-sizing: border-box;
+  height: 48px;
+  background: #090979;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  min-width: 200px;
+  font-weight: 600;
+
+  &:hover {
+    background:  linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    font-weight: 600;
+    color:  #fff;
+  }
+}
+
+input[type="file"] {
+  display: none;
+  caret-color: transparent;
+}
+
+.program-result {
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #090979;
+  min-height: 50px;
+  width: 100%;
+
+  &__subheader {
+    font-size: 18px;
+    font-weight: 600;
+    color: #090979;
+  }
+
+  &__output {
+    min-height: 100px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-left: 5%;
+  }
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding-left: 5%;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .button {
+    width: 100%;
+  }
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+}
+

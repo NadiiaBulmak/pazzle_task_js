@@ -3,11 +3,50 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
+    <title>Puzzle</title>
     <link rel="stylesheet" href="./styles/main.scss">
     <script src="scripts/main.js" defer></script>
   </head>
   <body>
-    <h1>Landing Page</h1>
+
+    <div class="container">
+      <div class="description">
+        <div class="description__subheader">How does it work?</div>
+        <div class="description__header">Builder of<br>One-Dimensional Digital Puzzle</div>
+        <div class="description__paragraph">
+          Do you like puzzles? Let's build a digital puzzle where the connecting elements will be the first or last two digits.
+          To simplify the task, we will use a one-dimensional puzzle, where its fragments can only be placed one after another.
+          <br>For example, we have the following number strings:<br>
+          <strong>608017, 248460, 962282, 994725, 177092</strong>
+        </div>
+        <div class="description__paragraph">
+          <br>
+          <strong>What do we get then?</strong><br>
+          By analyzing the last parts, we can create the following chain:<br>
+          <strong>248460 & 608017 & 177092 -> 2484(60)80(17)7092</strong>
+        </div>
+        <div class="description__paragraph">
+          Thus, the largest sequence and the answer will be: <strong>24846080177092</strong>
+        </div>
+      </div>
+
+      <div class="program-field">
+        <form class="form" id="fileForm">
+          <label class="form__label" for="file">Choose a file</label>
+          <input
+          type="file"
+          name="file"
+          id="file"
+          class="form__input"
+          accept=".txt" />
+          <button class="button" type="submit">Upload File</button>
+        </form>
+
+        <div class="program-result" id="output">
+          <div class="program-result__subheader">Processing Results:</div>
+          <div class="program-result__output"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
