@@ -142,14 +142,22 @@ input[type="file"] {
 @media (max-width: 768px) {
   body {
     padding-left: 5%;
+    display: flex;
+    align-content: center;
   }
   .container {
     width: 95%;
     padding: 20px;
   }
+  .form {
+    flex-direction: column;
+  }
+  .button {
+    width: 100%;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
     padding-left: 5%;
   }
